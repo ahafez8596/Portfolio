@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abdelaziz Hafez — Cloud Architect & Full‑stack Developer</title>
+  <meta name="description" content="Certified AWS/Azure Cloud Architect and seasoned Full‑stack Web Developer. Portfolio, projects, certifications, and contact." />
+  <meta property="og:title" content="Abdelaziz Hafez — Cloud Architect & Full‑stack Developer" />
+  <meta property="og:description" content="Certified AWS/Azure Cloud Architect and seasoned Full‑stack Web Developer." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b0f19" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root{
+      --bg:#0b0f19;--panel:#111827;--muted:#6b7280;--text:#e5e7eb;--ink:#f9fafb;--brand:#60a5fa;--brand-2:#22d3ee;--accent:#a78bfa;--ok:#34d399;--warn:#f59e0b;--danger:#ef4444;--ring: 0 0 0 3px rgba(96,165,250,.35);
+    }
+    :root.light{--bg:#f8fafc;--panel:#ffffff;--muted:#6b7280;--text:#0f172a;--ink:#0b0f19;--brand:#1d4ed8;--brand-2:#0891b2;--accent:#6d28d9;--ok:#047857;--warn:#b45309;--danger:#b91c1c}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:radial-gradient(1200px 600px at right -20%,rgba(96,165,250,.12),transparent 60%),radial-gradient(800px 400px at -10% 10%,rgba(34,211,238,.12),transparent 60%),var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Helvetica,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;background:linear-gradient(var(--bg),rgba(0,0,0,0.6));backdrop-filter: blur(6px);z-index:20;padding:16px 28px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:white;font-weight:800}
+    .title{font-size:18px;font-weight:700}
+    nav{display:flex;gap:20px;flex-wrap:wrap}
+    nav a{opacity:.9}
+    nav a:hover{opacity:1;text-decoration:underline}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.04));cursor:pointer}
+    .btn:hover{box-shadow:var(--ring)}
+    .primary{border-color:transparent;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:white}
+    .hero{padding:72px 28px}
+    .hero h1{font-size:44px;line-height:1.15;margin:0 0 12px}
+    .hero p{max-width:720px;margin:0 0 18px;color:var(--muted)}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+    .badge{padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);font-size:12px}
+    .grid{display:grid;gap:18px}
+    .two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:900px){.two,.three{grid-template-columns:1fr}}
+    section{padding:28px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.02));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px}
+    .card h3{margin:0 0 6px}
+    .muted{color:var(--muted)}
+    .list{display:flex;flex-direction:column;gap:12px}
+    .pill{display:inline-block;border-radius:10px;padding:2px 8px;background:rgba(255,255,255,.06);font-size:12px}
+    .footer{padding:40px 28px;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
+    .section-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 8px}
+    .projects .card{transition:transform .2s ease}
+    .projects .card:hover{transform:translateY(-4px)}
+    .timeline{position:relative}
+    .timeline:before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:rgba(255,255,255,.12)}
+    .t-item{position:relative;padding-left:34px}
+    .t-item:before{content:"";position:absolute;left:2px;top:6px;width:16px;height:16px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));border:2px solid var(--panel)}
+    .switch{display:inline-flex;align-items:center;gap:10px}
+    .toggle{width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.15);position:relative;cursor:pointer;border:1px solid rgba(255,255,255,.2)}
+    .knob{position:absolute;top:2px;left:2px;width:22px;height:22px;border-radius:999px;background:white;transition:left .2s}
+    :root.light .knob{left:22px}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:rgba(255,255,255,.08);padding:2px 6px;border-radius:6px;border:1px solid rgba(255,255,255,.12);font-size:12px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+  <script>
+    // Dark/Light preference
+    const saved = localStorage.getItem('theme');
+    if(saved === 'light') document.documentElement.classList.add('light');
+    function toggleTheme(){
+      document.documentElement.classList.toggle('light');
+      localStorage.setItem('theme', document.documentElement.classList.contains('light') ? 'light' : 'dark');
+    }
+
+    // Project data — edit me!
+    const PROJECTS = [
+      {
+        title: 'Well-Architected Serverless E‑commerce',
+        blurb: 'Multi‑account AWS architecture with API Gateway, Lambda (Node/Python), DynamoDB, and EventBridge; CI/CD via GitHub Actions → AWS CDK.',
+        stack: ['AWS', 'CDK', 'Lambda', 'DynamoDB', 'API Gateway'],
+        links: { demo: '#', code: 'https://github.com/your-username/ecommerce-serverless' }
+      },
+      {
+        title: 'Azure AKS + GitOps Platform',
+        blurb: 'AKS cluster with ingress, cert‑manager, ACR, Key Vault CSI; GitOps via Flux; blue/green deploys.',
+        stack: ['Azure', 'AKS', 'Flux', 'Key Vault'],
+        links: { demo: '#', code: 'https://github.com/your-username/aks-gitops' }
+      },
+      {
+        title: 'Full‑stack SaaS Starter',
+        blurb: 'React + FastAPI app with multi‑tenant auth (JWT), role‑based access, Stripe billing, and Terraform modules.',
+        stack: ['React', 'FastAPI', 'Postgres', 'Terraform'],
+        links: { demo: '#', code: 'https://github.com/your-username/saas-starter' }
+      }
+    ];
+
+    const CERTS = [
+      { name: 'AWS Certified Solutions Architect — Professional', year: '2025' },
+      { name: 'Microsoft Certified: Azure Solutions Architect Expert', year: '2025' }
+    ];
+
+    const SKILLS = {
+      'Cloud': ['AWS', 'Azure', 'CDK', 'Terraform', 'Well‑Architected', 'Cost Optimization', 'Landing Zones'],
+      'Backend': ['Node.js', 'Python', 'FastAPI', 'Express', 'GraphQL', 'gRPC'],
+      'Frontend': ['React', 'TypeScript', 'Vite', 'Tailwind', 'Next.js'],
+      'Data & Ops': ['PostgreSQL', 'Redis', 'S3', 'Athena', 'Airflow', 'Docker', 'Kubernetes', 'Helm', 'GitHub Actions']
+    };
+
+    const EXPERIENCE = [
+      {
+        role: 'Senior Cloud Architect',
+        company: 'Your Company',
+        period: '2023 — Present',
+        highlights: [
+          'Led multi‑region AWS re‑architecture reducing latency 38% and cost 22%.',
+          'Designed Azure landing zone with policy‑as‑code and automated guardrails.'
+        ]
+      },
+      {
+        role: 'Full‑stack Developer',
+        company: 'Another Co.',
+        period: '2019 — 2023',
+        highlights: [
+          'Built React/Node platform to 100k MAU; introduced CI/CD and infra‑as‑code.',
+          'Implemented observability with OpenTelemetry → Grafana.'
+        ]
+      }
+    ];
+
+    function el(tag, props={}, children=[]) {
+      const e = Object.assign(document.createElement(tag), props);
+      (Array.isArray(children)?children:[children]).filter(Boolean).forEach(c=> e.append(c.nodeType? c : document.createTextNode(c)));
+      return e;
+    }
+
+    function renderProjects(){
+      const root = document.getElementById('projects');
+      PROJECTS.forEach(p=>{
+        root.append(el('article',{className:'card'},[
+          el('h3',{},p.title),
+          el('p',{className:'muted'},p.blurb),
+          el('div',{className:'badges'}, p.stack.map(s=> el('span',{className:'badge'}, s))),
+          el('div',{style:'display:flex;gap:10px;margin-top:6px'},[
+            p.links.demo && el('a',{className:'btn', href:p.links.demo, target:'_blank', rel:'noopener'},['Live demo →']),
+            p.links.code && el('a',{className:'btn', href:p.links.code, target:'_blank', rel:'noopener'},['Source code →'])
+          ])
+        ]))
+      })
+    }
+
+    function renderCerts(){
+      const root = document.getElementById('certs');
+      CERTS.forEach(c=>{
+        root.append(el('div',{className:'card'},[
+          el('h3',{},c.name),
+          el('p',{className:'muted'},`Issued ${c.year}`)
+        ]))
+      })
+    }
+
+    function renderSkills(){
+      const root = document.getElementById('skills');
+      Object.entries(SKILLS).forEach(([group, list])=>{
+        root.append(el('div',{className:'card'},[
+          el('h3',{},group),
+          el('div',{className:'badges'}, list.map(s=> el('span',{className:'badge'}, s)))
+        ]))
+      })
+    }
+
+    function renderExperience(){
+      const root = document.getElementById('experience');
+      EXPERIENCE.forEach(item=>{
+        root.append(el('div',{className:'t-item card'},[
+          el('h3',{},`${item.role} · ${item.company}`),
+          el('p',{className:'muted'},item.period),
+          el('ul',{className:'list'}, item.highlights.map(h=> el('li',{},'• '+h)))
+        ]))
+      })
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      renderProjects();
+      renderCerts();
+      renderSkills();
+      renderExperience();
+    });
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdelaziz Hafez",
+    "jobTitle": "Cloud Architect & Full‑stack Developer",
+    "url": "https://your-domain.dev",
+    "sameAs": [
+      "https://github.com/your-username",
+      "https://www.linkedin.com/in/your-linkedin"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">AH</div>
+      <div>
+        <div class="title">Abdelaziz Hafez</div>
+        <div class="muted" style="font-size:13px">AWS/Azure Cloud Architect · Full‑stack Web Developer</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <span class="switch">
+        <span class="sr-only">Theme</span>
+        <div class="toggle" role="switch" aria-checked="false" onclick="toggleTheme()"><div class="knob"></div></div>
+      </span>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Designing scalable cloud platforms & building delightful web apps.</h1>
+      <p>Certified <strong>AWS</strong> / <strong>Azure</strong> architect and seasoned <strong>Full‑stack developer</strong> with a track record of high‑availability, cost‑efficient systems. I love infra‑as‑code, automation, and clean UX.</p>
+      <div class="badges">
+        <span class="badge">AWS SA‑Pro</span>
+        <span class="badge">Azure Architect Expert</span>
+        <span class="badge">Terraform / CDK</span>
+        <span class="badge">React / FastAPI</span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="/resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="section-title">
+        <h2>Featured Projects</h2>
+        <span class="muted">Real work. Real impact.</span>
+      </div>
+      <div class="grid three" id="projects"></div>
+    </section>
+
+    <section id="experience">
+      <div class="section-title">
+        <h2>Experience</h2>
+        <span class="muted">Selected roles</span>
+      </div>
+      <div class="timeline grid" id="experience"></div>
+    </section>
+
+    <section id="certifications">
+      <div class="section-title">
+        <h2>Certifications</h2>
+        <span class="muted">Valid & current</span>
+      </div>
+      <div class="grid two" id="certs"></div>
+    </section>
+
+    <section id="skills">
+      <div class="section-title">
+        <h2>Skills</h2>
+        <span class="muted">Cloud · Dev · Data · Ops</span>
+      </div>
+      <div class="grid two" id="skills"></div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p class="muted">Open to consulting, architecture reviews, and build‑outs.</p>
+      <div class="badges">
+        <span class="pill">Based in USA (AZ timezone)</span>
+        <span class="pill">Remote‑friendly</span>
+        <span class="pill">English / Arabic</span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
+        <a class="btn primary" href="mailto:you@your-domain.dev">Email me</a>
+        <a class="btn" href="https://cal.com/your-handle/intro" target="_blank" rel="noopener">Book a call</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div>© <span id="y"></span> Abdelaziz Hafez. Built with vanilla HTML/CSS/JS. <span class="muted">Dark‑mode, a11y, and SEO‑friendly.</span></div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
