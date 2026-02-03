@@ -8,291 +8,590 @@
   <meta property="og:title" content="Abdelaziz Hafez — Cloud Architect & Full‑stack Developer" />
   <meta property="og:description" content="Certified AWS/Azure Cloud Architect and seasoned Full‑stack Web Developer." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0b0f19" />
+  <meta name="theme-color" content="#120a07" />
   <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0b0f19;--panel:#111827;--muted:#6b7280;--text:#e5e7eb;--ink:#f9fafb;--brand:#60a5fa;--brand-2:#22d3ee;--accent:#a78bfa;--ok:#34d399;--warn:#f59e0b;--danger:#ef4444;--ring: 0 0 0 3px rgba(96,165,250,.35);
+    :root {
+      --bg-deep: #120a07;
+      --copper-primary: #b87333;
+      --copper-glow: #ff8c42;
+      --copper-dark: #3d2314;
+      --copper-etched: #1e110b;
+      --verdigris: #4fb2aa;
+      --text: #d4a373;
+      --text-light: #eee;
+      --muted: #8b7355;
+      --surface-grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     }
-    :root.light{--bg:#f0f4f8;--panel:#ffffff;--muted:#475569;--text:#1e293b;--ink:#0f172a;--brand:#3b82f6;--brand-2:#06b6d4;--accent:#8b5cf6;--ok:#10b981;--warn:#f59e0b;--danger:#ef4444}
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;background:radial-gradient(1200px 600px at right -20%,rgba(59,130,246,.08),transparent 60%),radial-gradient(800px 400px at -10% 10%,rgba(6,182,212,.06),transparent 60%),linear-gradient(135deg,#f0f4f8 0%,#e2e8f0 50%,#cbd5e1 100%);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Helvetica,Arial,sans-serif;overflow-x:hidden;position:relative;z-index:1}
-    :root.light body{background:radial-gradient(1200px 600px at right -20%,rgba(59,130,246,.04),transparent 60%),radial-gradient(800px 400px at -10% 10%,rgba(6,182,212,.03),transparent 60%),linear-gradient(135deg,#fafbfc 0%,#f8fafd 25%,#f1f5f9 50%,#e2e8f0 75%,#cbd5e1 100%)}
-    a{color:inherit;text-decoration:none;transition:all 0.2s ease}
-    .container{max-width:1100px;margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;background:linear-gradient(var(--bg),rgba(0,0,0,0.6));backdrop-filter: blur(6px);z-index:20;padding:16px 28px;border-bottom:1px solid rgba(255,255,255,.06);animation:slideDown 0.6s ease-out}
-    .brand{display:flex;align-items:center;gap:14px;animation:fadeInScale 0.8s ease-out}
-    .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:white;font-weight:800;transition:transform 0.3s ease, box-shadow 0.3s ease}
-    .logo:hover{transform:rotate(360deg) scale(1.1);box-shadow:0 0 20px rgba(96,165,250,0.5)}
-    .title{font-size:18px;font-weight:700}
-    nav{display:flex;gap:20px;flex-wrap:wrap;animation:fadeIn 1s ease-out 0.2s both}
-    nav a{opacity:.9;position:relative;transition:all 0.2s ease}
-    nav a:hover{opacity:1}
-    nav a:after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--brand);transition:width 0.3s ease}
-    nav a:hover:after, nav a.active:after{width:100%}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.04));cursor:pointer;transition:all 0.3s ease;position:relative;overflow:hidden}
-    :root.light .btn{background:linear-gradient(145deg,rgba(255,255,255,0.8),rgba(248,250,252,0.6)),linear-gradient(135deg,rgba(59,130,246,0.03),rgba(6,182,212,0.02));border:1px solid rgba(226,232,240,0.4);box-shadow:0 1px 3px rgba(0,0,0,0.05),0 1px 2px rgba(0,0,0,0.03),inset 0 1px 1px rgba(255,255,255,0.9)}
-    .btn:before{content:'';position:absolute;top:50%;left:50%;width:0;height:0;background:rgba(255,255,255,0.1);border-radius:50%;transform:translate(-50%,-50%);transition:width 0.5s ease, height 0.5s ease}
-    .btn:hover:before{width:300px;height:300px}
-    .btn:hover{box-shadow:var(--ring);transform:translateY(-2px)}
-    :root.light .btn:hover{box-shadow:0 4px 20px rgba(59,130,246,0.2),0 2px 10px rgba(6,182,212,0.15),inset 0 1px 1px rgba(255,255,255,1);background:linear-gradient(145deg,rgba(255,255,255,1),rgba(248,250,252,0.8)),linear-gradient(135deg,rgba(59,130,246,0.05),rgba(6,182,212,0.03))}
-    .primary{border-color:transparent;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:white}
-    :root.light .primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:white;box-shadow:0 2px 8px rgba(59,130,246,0.3),0 1px 4px rgba(6,182,212,0.2)}
-    .hero{padding:72px 28px;min-height:80vh;display:flex;flex-direction:column;justify-content:center}
-    .hero h1{font-size:44px;line-height:1.15;margin:0 0 12px;animation:slideInUp 0.8s ease-out}
-    .hero p{max-width:720px;margin:0 0 18px;color:var(--muted);animation:slideInUp 0.8s ease-out 0.2s both}
-    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0;animation:slideInUp 0.8s ease-out 0.4s both}
-    .badge{padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);font-size:12px;transition:all 0.2s ease;cursor:default}
-    .badge:hover{transform:scale(1.1);background:rgba(255,255,255,.08)}
-    .grid{display:grid;gap:18px}
-    .two{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .three{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media (max-width:900px){.two,.three{grid-template-columns:1fr}}
-    section{padding:28px}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.02));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px;transition:all 0.3s ease;position:relative;overflow:hidden}
-    :root.light .card{background:linear-gradient(145deg,rgba(255,255,255,0.9),rgba(248,250,252,0.7)),linear-gradient(135deg,rgba(59,130,246,0.02),rgba(6,182,212,0.01));border:1px solid rgba(226,232,240,0.6);box-shadow:0 1px 3px rgba(0,0,0,0.05),0 1px 2px rgba(0,0,0,0.03),inset 0 1px 1px rgba(255,255,255,0.8)}
-    .card:before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent);transition:left 0.6s ease}
-    .card:hover:before{left:100%}
-    .card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,0.3);border-color:var(--brand)}
-    :root.light .card:hover{box-shadow:0 10px 40px rgba(59,130,246,0.15),0 4px 20px rgba(6,182,212,0.1),inset 0 1px 1px rgba(255,255,255,1);border-color:var(--brand);background:linear-gradient(145deg,rgba(255,255,255,1),rgba(248,250,252,0.8)),linear-gradient(135deg,rgba(59,130,246,0.03),rgba(6,182,212,0.02))}
-    .card h3{margin:0 0 6px;transition:color 0.3s ease}
-    .card:hover h3{color:var(--brand)}
-    .muted{color:var(--muted)}
-    .list{display:flex;flex-direction:column;gap:12px}
-    .pill{display:inline-block;border-radius:10px;padding:2px 8px;background:rgba(255,255,255,.06);font-size:12px;transition:all 0.2s ease}
-    .pill:hover{background:rgba(255,255,255,.12);transform:scale(1.05)}
-    .footer{padding:40px 28px;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
-    .section-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 8px}
-    .projects .card{transition:all 0.3s ease}
-    .projects .card:hover{transform:translateY(-4px);box-shadow:0 15px 40px rgba(0,0,0,0.2)}
-    .timeline{position:relative}
-    .timeline:before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:rgba(255,255,255,.12)}
-    .t-item{position:relative;padding-left:34px;animation:slideInLeft 0.6s ease-out both}
-    .t-item:before{content:"";position:absolute;left:2px;top:6px;width:16px;height:16px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));border:2px solid var(--panel);transition:all 0.3s ease}
-    .t-item:hover:before{transform:scale(1.3);box-shadow:0 0 15px rgba(96,165,250,0.6)}
-    .switch{display:inline-flex;align-items:center;gap:10px}
-    .toggle{width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.15);position:relative;cursor:pointer;border:1px solid rgba(255,255,255,.2);transition:all 0.3s ease}
-    .toggle:hover{background:rgba(255,255,255,.25)}
-    .knob{position:absolute;top:2px;left:2px;width:22px;height:22px;border-radius:999px;background:white;transition:all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55)}
-    :root.light .knob{left:22px}
-    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:rgba(255,255,255,.08);padding:2px 6px;border-radius:6px;border:1px solid rgba(255,255,255,.12);font-size:12px;transition:all 0.2s ease}
-    .kbd:hover{background:rgba(255,255,255,.12);transform:scale(1.05)}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    
-    /* Animations */
-    @keyframes slideDown{from{transform:translateY(-100%);opacity:0}to{transform:translateY(0);opacity:1}}
-    @keyframes fadeInScale{from{transform:scale(0.8);opacity:0}to{transform:scale(1);opacity:1}}
-    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-    @keyframes slideInUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
-    @keyframes slideInLeft{from{transform:translateX(-30px);opacity:0}to{transform:translateX(0);opacity:1}}
-    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-    @keyframes shimmer{0%{background-position:-1000px 0}100%{background-position:1000px 0}}
-    
-    /* Scroll animations */
-    .fade-in{opacity:0;transform:translateY(30px);transition:all 0.6s ease}
-    .fade-in.visible{opacity:1;transform:translateY(0)}
-    
-    /* Loading skeleton */
-    .skeleton{background:linear-gradient(90deg,rgba(255,255,255,0.1) 25%,rgba(255,255,255,0.2) 50%,rgba(255,255,255,0.1) 75%);background-size:1000px 100%;animation:shimmer 2s infinite}
-    
-    /* Parallax Stars Background */
-    #stars, #stars2, #stars3 {
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      cursor: crosshair;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-color: var(--bg-deep);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    /* The Lithography Grain Overlay */
+    .grain-overlay {
       position: fixed;
       top: 0;
       left: 0;
-      right: 0;
+      width: 100%;
+      height: 100%;
+      background-image: var(--surface-grain);
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .anodized-bg {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(184, 115, 51, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(79, 178, 170, 0.03) 0%, transparent 50%);
+      z-index: -1;
+    }
+
+    /* Layout */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+      position: relative;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--copper-dark);
+      position: sticky;
+      top: 0;
+      background: linear-gradient(var(--bg-deep), rgba(18, 10, 7, 0.95));
+      backdrop-filter: blur(6px);
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      color: var(--copper-primary);
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--copper-dark);
+      background: linear-gradient(135deg, var(--copper-etched), var(--bg-deep));
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+      transition: all 0.3s ease;
+    }
+
+    .logo:hover {
+      border-color: var(--copper-primary);
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 0 15px rgba(184, 115, 51, 0.3);
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-light);
+    }
+
+    .subtitle-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+    }
+
+    nav a {
+      color: #fff;
+      opacity: 0.5;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--copper-primary);
+      opacity: 1;
+    }
+
+    /* Hero Typography */
+    .hero {
+      padding: 6rem 0;
+      position: relative;
+    }
+
+    .blueprint-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(184, 115, 51, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(184, 115, 51, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      text-transform: uppercase;
+      background: linear-gradient(to bottom, #fff, var(--copper-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--verdigris);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .hero-subtitle::before {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--verdigris);
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 0 1.5rem;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    /* Badges */
+    .badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+
+    .badge {
+      padding: 6px 12px;
+      border: 1px solid var(--copper-dark);
+      background: var(--copper-etched);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--copper-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      transition: all 0.2s ease;
+    }
+
+    .badge:hover {
+      border-color: var(--copper-primary);
+      background: rgba(184, 115, 51, 0.1);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border: 1px solid var(--copper-dark);
+      background: linear-gradient(135deg, var(--copper-etched), var(--bg-deep));
+      color: var(--text-light);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--copper-glow), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+    }
+
+    .btn:hover {
+      border-color: var(--copper-primary);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3), 0 0 15px rgba(184, 115, 51, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .btn:hover::after {
+      transform: translateX(100%);
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--copper-primary), var(--copper-dark));
+      border-color: var(--copper-glow);
+      color: #fff;
+    }
+
+    .btn.primary:hover {
+      box-shadow: 0 5px 25px rgba(184, 115, 51, 0.4);
+    }
+
+    /* Grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .two { grid-template-columns: repeat(2, 1fr); }
+    .three { grid-template-columns: repeat(3, 1fr); }
+
+    @media (max-width: 900px) {
+      .two, .three { grid-template-columns: 1fr; }
+      .grid-container { grid-template-columns: 1fr; }
+      .etched-plate { grid-column: span 1 !important; }
+    }
+
+    /* Section Titles */
+    section {
+      padding: 3rem 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--copper-dark);
+    }
+
+    .section-title h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+    }
+
+    .section-title .muted {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--verdigris);
+      text-transform: uppercase;
+    }
+
+    /* The Etched Components / Cards */
+    .etched-plate, .card {
+      background: var(--copper-etched);
+      border: 1px solid var(--copper-dark);
+      padding: 2rem;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+    }
+
+    .etched-plate {
+      grid-column: span 6;
+    }
+
+    .etched-plate:hover, .card:hover {
+      border-color: var(--copper-primary);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(184, 115, 51, 0.1);
+    }
+
+    .etched-plate::after, .card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--copper-glow), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .etched-plate:hover::after, .card:hover::after {
+      transform: translateX(100%);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 0.75rem;
+      transition: color 0.3s ease;
+    }
+
+    .card:hover h3 {
+      color: var(--copper-primary);
+    }
+
+    .card p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--copper-primary);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .plate-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(184, 115, 51, 0.1);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+    }
+
+    .data-row:last-child {
+      border-bottom: none;
+    }
+
+    .data-value {
+      color: var(--copper-primary);
+    }
+
+    /* Decorative "Hardware" elements */
+    .screw {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: radial-gradient(circle, #444, #111);
+      border-radius: 50%;
+      border: 1px solid #000;
+    }
+
+    .tl { top: 10px; left: 10px; }
+    .tr { top: 10px; right: 10px; }
+    .bl { bottom: 10px; left: 10px; }
+    .br { bottom: 10px; right: 10px; }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 0;
       bottom: 0;
+      width: 2px;
+      background: var(--copper-dark);
+    }
+
+    .t-item {
+      position: relative;
+      padding-left: 34px;
+    }
+
+    .t-item::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 2rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--copper-primary), var(--verdigris));
+      border: 2px solid var(--bg-deep);
+      transition: all 0.3s ease;
+    }
+
+    .t-item:hover::before {
+      transform: scale(1.3);
+      box-shadow: 0 0 15px rgba(184, 115, 51, 0.6);
+    }
+
+    /* Large Action Link */
+    .cta-link {
+      grid-column: span 12;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+      background: linear-gradient(90deg, var(--copper-dark), transparent);
+      border-left: 4px solid var(--copper-primary);
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .cta-link:hover {
+      background: linear-gradient(90deg, var(--copper-primary), transparent);
+      padding-left: 3rem;
+    }
+
+    .cta-link span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1rem;
+      opacity: 0.6;
+    }
+
+    /* Pills */
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      background: var(--copper-etched);
+      border: 1px solid var(--copper-dark);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--verdigris);
+      transition: all 0.2s ease;
+    }
+
+    .pill:hover {
+      border-color: var(--verdigris);
+    }
+
+    /* Muted */
+    .muted {
+      color: var(--muted);
+    }
+
+    /* List */
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .list li {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--copper-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+    }
+
+    .footer-coords {
+      opacity: 0.4;
+    }
+
+    .footer-copy {
+      color: var(--verdigris);
+    }
+
+    /* Screen reader only */
+    .sr-only {
+      position: absolute;
       width: 1px;
       height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
     }
-    :root.light #stars { box-shadow: 
-      1203px 1423px rgba(59,130,246,0.3), 1732px 1122px rgba(6,182,212,0.3), 622px 1415px rgba(139,92,246,0.3), 416px 1324px rgba(59,130,246,0.3),
-      1324px 331px rgba(6,182,212,0.3), 824px 928px rgba(139,92,246,0.3), 1925px 1753px rgba(59,130,246,0.3), 1925px 1153px rgba(6,182,212,0.3),
-      1725px 1353px rgba(139,92,246,0.3), 428px 324px rgba(59,130,246,0.3), 928px 524px rgba(6,182,212,0.3), 1228px 724px rgba(139,92,246,0.3),
-      828px 424px rgba(59,130,246,0.3), 1628px 824px rgba(6,182,212,0.3), 1328px 624px rgba(139,92,246,0.3), 728px 324px rgba(59,130,246,0.3),
-      1128px 724px rgba(6,182,212,0.3), 928px 424px rgba(139,92,246,0.3), 828px 324px rgba(59,130,246,0.3), 1028px 524px rgba(6,182,212,0.3),
-      1228px 724px rgba(139,92,246,0.3), 828px 424px rgba(59,130,246,0.3), 728px 324px rgba(6,182,212,0.3), 928px 524px rgba(139,92,246,0.3),
-      1128px 724px rgba(59,130,246,0.3), 828px 424px rgba(6,182,212,0.3), 1028px 524px rgba(139,92,246,0.3), 728px 324px rgba(59,130,246,0.3),
-      928px 524px rgba(6,182,212,0.3), 828px 424px rgba(139,92,246,0.3), 1128px 724px rgba(59,130,246,0.3), 728px 324px rgba(6,182,212,0.3),
-      1028px 524px rgba(139,92,246,0.3), 928px 424px rgba(59,130,246,0.3), 828px 324px rgba(6,182,212,0.3), 1128px 724px rgba(139,92,246,0.3),
-      728px 324px rgba(59,130,246,0.3), 928px 524px rgba(6,182,212,0.3), 1028px 724px rgba(139,92,246,0.3), 828px 424px rgba(59,130,246,0.3),
-      1128px 524px rgba(6,182,212,0.3), 928px 324px rgba(139,92,246,0.3), 828px 724px rgba(59,130,246,0.3), 728px 424px rgba(6,182,212,0.3),
-      1028px 524px rgba(139,92,246,0.3), 1128px 324px rgba(59,130,246,0.3), 928px 724px rgba(6,182,212,0.3), 828px 424px rgba(139,92,246,0.3),
-      728px 524px rgba(59,130,246,0.3), 1028px 324px rgba(6,182,212,0.3), 1128px 724px rgba(139,92,246,0.3), 928px 424px rgba(6,182,212,0.3);
+
+    /* Animations */
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    :root.light #stars:after { box-shadow: 
-      1203px 1423px rgba(59,130,246,0.3), 1732px 1122px rgba(6,182,212,0.3), 622px 1415px rgba(139,92,246,0.3), 416px 1324px rgba(59,130,246,0.3),
-      1324px 331px rgba(6,182,212,0.3), 824px 928px rgba(139,92,246,0.3), 1925px 1753px rgba(59,130,246,0.3), 1925px 1153px rgba(6,182,212,0.3),
-      1725px 1353px rgba(139,92,246,0.3), 428px 324px rgba(59,130,246,0.3), 928px 524px rgba(6,182,212,0.3), 1228px 724px rgba(139,92,246,0.3),
-      828px 424px rgba(59,130,246,0.3), 1628px 824px rgba(6,182,212,0.3), 1328px 624px rgba(139,92,246,0.3), 728px 324px rgba(59,130,246,0.3),
-      1128px 724px rgba(6,182,212,0.3), 928px 424px rgba(139,92,246,0.3), 828px 324px rgba(59,130,246,0.3), 1028px 524px rgba(6,182,212,0.3),
-      1228px 724px rgba(139,92,246,0.3), 828px 424px rgba(59,130,246,0.3), 728px 324px rgba(6,182,212,0.3), 928px 524px rgba(139,92,246,0.3),
-      1128px 724px rgba(59,130,246,0.3), 828px 424px rgba(6,182,212,0.3), 1028px 524px rgba(139,92,246,0.3), 728px 324px rgba(59,130,246,0.3),
-      928px 524px rgba(6,182,212,0.3), 828px 424px rgba(139,92,246,0.3), 1128px 724px rgba(59,130,246,0.3), 728px 324px rgba(6,182,212,0.3),
-      1028px 524px rgba(139,92,246,0.3), 928px 424px rgba(59,130,246,0.3), 828px 324px rgba(6,182,212,0.3), 1128px 724px rgba(139,92,246,0.3),
-      728px 324px rgba(59,130,246,0.3), 928px 524px rgba(6,182,212,0.3), 1028px 724px rgba(139,92,246,0.3), 828px 424px rgba(59,130,246,0.3),
-      1128px 524px rgba(6,182,212,0.3), 928px 324px rgba(139,92,246,0.3), 828px 724px rgba(59,130,246,0.3), 728px 424px rgba(6,182,212,0.3),
-      1028px 524px rgba(139,92,246,0.3), 1128px 324px rgba(59,130,246,0.3), 928px 724px rgba(6,182,212,0.3), 828px 424px rgba(139,92,246,0.3),
-      728px 524px rgba(59,130,246,0.3), 1028px 324px rgba(6,182,212,0.3), 1128px 724px rgba(139,92,246,0.3), 928px 424px rgba(6,182,212,0.3);
+
+    .reveal {
+      animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
-    :root.light #stars2 { box-shadow: 
-      801px 421px rgba(59,130,246,0.25), 925px 599px rgba(6,182,212,0.25), 1102px 872px rgba(139,92,246,0.25), 665px 1111px rgba(59,130,246,0.25),
-      1320px 1110px rgba(6,182,212,0.25), 1690px 521px rgba(139,92,246,0.25), 1710px 160px rgba(59,130,246,0.25), 1569px 1084px rgba(6,182,212,0.25),
-      1392px 1151px rgba(139,92,246,0.25), 1770px 1021px rgba(59,130,246,0.25), 1766px 897px rgba(6,182,212,0.25), 1230px 1101px rgba(139,92,246,0.25),
-      1400px 1100px rgba(59,130,246,0.25), 1500px 1200px rgba(6,182,212,0.25), 1100px 1000px rgba(139,92,246,0.25), 1300px 900px rgba(59,130,246,0.25),
-      1200px 800px rgba(6,182,212,0.25), 1400px 1000px rgba(139,92,246,0.25), 1000px 1200px rgba(59,130,246,0.25), 1500px 700px rgba(6,182,212,0.25),
-      1300px 1100px rgba(139,92,246,0.25), 1100px 900px rgba(59,130,246,0.25), 1200px 1000px rgba(6,182,212,0.25), 1400px 800px rgba(139,92,246,0.25),
-      1000px 1000px rgba(59,130,246,0.25), 1500px 1100px rgba(6,182,212,0.25), 1300px 900px rgba(139,92,246,0.25), 1200px 1200px rgba(6,182,212,0.25);
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
     }
-    :root.light #stars2:after { box-shadow: 
-      801px 421px rgba(59,130,246,0.25), 925px 599px rgba(6,182,212,0.25), 1102px 872px rgba(139,92,246,0.25), 665px 1111px rgba(59,130,246,0.25),
-      1320px 1110px rgba(6,182,212,0.25), 1690px 521px rgba(139,92,246,0.25), 1710px 160px rgba(59,130,246,0.25), 1569px 1084px rgba(6,182,212,0.25),
-      1392px 1151px rgba(139,92,246,0.25), 1770px 1021px rgba(59,130,246,0.25), 1766px 897px rgba(6,182,212,0.25), 1230px 1101px rgba(139,92,246,0.25),
-      1400px 1100px rgba(59,130,246,0.25), 1500px 1200px rgba(6,182,212,0.25), 1100px 1000px rgba(139,92,246,0.25), 1300px 900px rgba(59,130,246,0.25),
-      1200px 800px rgba(6,182,212,0.25), 1400px 1000px rgba(139,92,246,0.25), 1000px 1200px rgba(59,130,246,0.25), 1500px 700px rgba(6,182,212,0.25),
-      1300px 1100px rgba(139,92,246,0.25), 1100px 900px rgba(59,130,246,0.25), 1200px 1000px rgba(6,182,212,0.25), 1400px 800px rgba(139,92,246,0.25),
-      1000px 1000px rgba(59,130,246,0.25), 1500px 1100px rgba(6,182,212,0.25), 1300px 900px rgba(139,92,246,0.25), 1200px 1200px rgba(6,182,212,0.25);
-    }
-    :root.light #stars3 { box-shadow: 
-      1652px 262px rgba(59,130,246,0.2), 867px 632px rgba(6,182,212,0.2), 1398px 1401px rgba(139,92,246,0.2), 399px 1265px rgba(59,130,246,0.2),
-      1837px 1201px rgba(6,182,212,0.2), 1570px 885px rgba(139,92,246,0.2), 1032px 1365px rgba(59,130,246,0.2), 1501px 421px rgba(6,182,212,0.2),
-      1201px 401px rgba(139,92,246,0.2), 863px 1365px rgba(59,130,246,0.2), 1832px 401px rgba(6,182,212,0.2), 401px 1201px rgba(139,92,246,0.2),
-      1201px 1301px rgba(59,130,246,0.2), 1501px 501px rgba(6,182,212,0.2), 1001px 1201px rgba(139,92,246,0.2), 1401px 801px rgba(59,130,246,0.2),
-      1101px 1001px rgba(6,182,212,0.2), 1301px 1101px rgba(139,92,246,0.2), 901px 1301px rgba(59,130,246,0.2), 1501px 701px rgba(6,182,212,0.2),
-      1301px 1101px rgba(139,92,246,0.2), 1101px 901px rgba(59,130,246,0.2), 1201px 1001px rgba(6,182,212,0.2), 1401px 801px rgba(139,92,246,0.2),
-      1001px 1001px rgba(59,130,246,0.2), 1501px 1101px rgba(6,182,212,0.2), 1301px 901px rgba(139,92,246,0.2), 1201px 1201px rgba(6,182,212,0.2);
-    }
-    :root.light #stars3:after { box-shadow: 
-      1652px 262px rgba(59,130,246,0.2), 867px 632px rgba(6,182,212,0.2), 1398px 1401px rgba(139,92,246,0.2), 399px 1265px rgba(59,130,246,0.2),
-      1837px 1201px rgba(6,182,212,0.2), 1570px 885px rgba(139,92,246,0.2), 1032px 1365px rgba(59,130,246,0.2), 1501px 421px rgba(6,182,212,0.2),
-      1201px 401px rgba(139,92,246,0.2), 863px 1365px rgba(59,130,246,0.2), 1832px 401px rgba(6,182,212,0.2), 401px 1201px rgba(139,92,246,0.2),
-      1201px 1301px rgba(59,130,246,0.2), 1501px 501px rgba(6,182,212,0.2), 1001px 1201px rgba(139,92,246,0.2), 1401px 801px rgba(59,130,246,0.2),
-      1101px 1001px rgba(6,182,212,0.2), 1301px 1101px rgba(139,92,246,0.2), 901px 1301px rgba(59,130,246,0.2), 1501px 701px rgba(6,182,212,0.2),
-      1301px 1101px rgba(139,92,246,0.2), 1101px 901px rgba(59,130,246,0.2), 1201px 1001px rgba(6,182,212,0.2), 1401px 801px rgba(139,92,246,0.2),
-      1001px 1001px rgba(59,130,246,0.2), 1501px 1101px rgba(6,182,212,0.2), 1301px 901px rgba(139,92,246,0.2), 1201px 1201px rgba(6,182,212,0.2);
-    }
-    
-    #stars {
-      background: transparent;
-      box-shadow: 
-        1203px 1423px #fff, 1732px 1122px #fff, 622px 1415px #fff, 416px 1324px #fff,
-        1324px 331px #fff, 824px 928px #fff, 1925px 1753px #fff, 1925px 1153px #fff,
-        1725px 1353px #fff, 428px 324px #fff, 928px 524px #fff, 1228px 724px #fff,
-        828px 424px #fff, 1628px 824px #fff, 1328px 624px #fff, 728px 324px #fff,
-        1128px 724px #fff, 928px 424px #fff, 828px 324px #fff, 1028px 524px #fff,
-        1228px 724px #fff, 828px 424px #fff, 728px 324px #fff, 928px 524px #fff,
-        1128px 724px #fff, 828px 424px #fff, 1028px 524px #fff, 728px 324px #fff,
-        928px 524px #fff, 828px 424px #fff, 1128px 724px #fff, 728px 324px #fff,
-        1028px 524px #fff, 928px 424px #fff, 828px 324px #fff, 1128px 724px #fff,
-        728px 324px #fff, 928px 524px #fff, 1028px 724px #fff, 828px 424px #fff,
-        1128px 524px #fff, 928px 324px #fff, 828px 724px #fff, 728px 424px #fff,
-        1028px 524px #fff, 1128px 324px #fff, 928px 724px #fff, 828px 424px #fff,
-        728px 524px #fff, 1028px 324px #fff, 1128px 724px #fff, 928px 424px #fff;
-      animation: animStar 50s linear infinite;
-    }
-    
-    #stars:after {
-      content: " ";
-      position: absolute;
-      top: 2000px;
-      width: 1px;
-      height: 1px;
-      background: transparent;
-      box-shadow: 
-        1203px 1423px #fff, 1732px 1122px #fff, 622px 1415px #fff, 416px 1324px #fff,
-        1324px 331px #fff, 824px 928px #fff, 1925px 1753px #fff, 1925px 1153px #fff,
-        1725px 1353px #fff, 428px 324px #fff, 928px 524px #fff, 1228px 724px #fff,
-        828px 424px #fff, 1628px 824px #fff, 1328px 624px #fff, 728px 324px #fff,
-        1128px 724px #fff, 928px 424px #fff, 828px 324px #fff, 1028px 524px #fff,
-        1228px 724px #fff, 828px 424px #fff, 728px 324px #fff, 928px 524px #fff,
-        1128px 724px #fff, 828px 424px #fff, 1028px 524px #fff, 728px 324px #fff,
-        928px 524px #fff, 828px 424px #fff, 1128px 724px #fff, 728px 324px #fff,
-        1028px 524px #fff, 928px 424px #fff, 828px 324px #fff, 1128px 724px #fff,
-        728px 324px #fff, 928px 524px #fff, 1028px 724px #fff, 828px 424px #fff,
-        1128px 524px #fff, 928px 324px #fff, 828px 724px #fff, 728px 424px #fff,
-        1028px 524px #fff, 1128px 324px #fff, 928px 724px #fff, 828px 424px #fff,
-        728px 524px #fff, 1028px 324px #fff, 1128px 724px #fff, 928px 424px #fff;
-    }
-    
-    #stars2 {
-      width: 2px;
-      height: 2px;
-      background: transparent;
-      box-shadow: 
-        801px 421px #fff, 925px 599px #fff, 1102px 872px #fff, 665px 1111px #fff,
-        1320px 1110px #fff, 1690px 521px #fff, 1710px 160px #fff, 1569px 1084px #fff,
-        1392px 1151px #fff, 1770px 1021px #fff, 1766px 897px #fff, 1230px 1101px #fff,
-        1400px 1100px #fff, 1500px 1200px #fff, 1100px 1000px #fff, 1300px 900px #fff,
-        1200px 800px #fff, 1400px 1000px #fff, 1000px 1200px #fff, 1500px 700px #fff,
-        1300px 1100px #fff, 1100px 900px #fff, 1200px 1000px #fff, 1400px 800px #fff,
-        1000px 1000px #fff, 1500px 1100px #fff, 1300px 900px #fff, 1200px 1200px #fff;
-      animation: animStar 100s linear infinite;
-    }
-    
-    #stars2:after {
-      content: " ";
-      position: absolute;
-      top: 2000px;
-      width: 2px;
-      height: 2px;
-      background: transparent;
-      box-shadow: 
-        801px 421px #fff, 925px 599px #fff, 1102px 872px #fff, 665px 1111px #fff,
-        1320px 1110px #fff, 1690px 521px #fff, 1710px 160px #fff, 1569px 1084px #fff,
-        1392px 1151px #fff, 1770px 1021px #fff, 1766px 897px #fff, 1230px 1101px #fff,
-        1400px 1100px #fff, 1500px 1200px #fff, 1100px 1000px #fff, 1300px 900px #fff,
-        1200px 800px #fff, 1400px 1000px #fff, 1000px 1200px #fff, 1500px 700px #fff,
-        1300px 1100px #fff, 1100px 900px #fff, 1200px 1000px #fff, 1400px 800px #fff,
-        1000px 1000px #fff, 1500px 1100px #fff, 1300px 900px #fff, 1200px 1200px #fff;
-    }
-    
-    #stars3 {
-      width: 3px;
-      height: 3px;
-      background: transparent;
-      box-shadow: 
-        1652px 262px #fff, 867px 632px #fff, 1398px 1401px #fff, 399px 1265px #fff,
-        1837px 1201px #fff, 1570px 885px #fff, 1032px 1365px #fff, 1501px 421px #fff,
-        1201px 401px #fff, 863px 1365px #fff, 1832px 401px #fff, 401px 1201px #fff,
-        1201px 1301px #fff, 1501px 501px #fff, 1001px 1201px #fff, 1401px 801px #fff,
-        1101px 1001px #fff, 1301px 1101px #fff, 901px 1301px #fff, 1501px 701px #fff,
-        1301px 1101px #fff, 1101px 901px #fff, 1201px 1001px #fff, 1401px 801px #fff,
-        1001px 1001px #fff, 1501px 1101px #fff, 1301px 901px #fff, 1201px 1201px #fff;
-      animation: animStar 150s linear infinite;
-    }
-    
-    #stars3:after {
-      content: " ";
-      position: absolute;
-      top: 2000px;
-      width: 3px;
-      height: 3px;
-      background: transparent;
-      box-shadow: 
-        1652px 262px #fff, 867px 632px #fff, 1398px 1401px #fff, 399px 1265px #fff,
-        1837px 1201px #fff, 1570px 885px #fff, 1032px 1365px #fff, 1501px 421px #fff,
-        1201px 401px #fff, 863px 1365px #fff, 1832px 401px #fff, 401px 1201px #fff,
-        1201px 1301px #fff, 1501px 501px #fff, 1001px 1201px #fff, 1401px 801px #fff,
-        1101px 1001px #fff, 1301px 1101px #fff, 901px 1301px #fff, 1501px 701px #fff,
-        1301px 1101px #fff, 1101px 901px #fff, 1201px 1001px #fff, 1401px 801px #fff,
-        1001px 1001px #fff, 1501px 1101px #fff, 1301px 901px #fff, 1201px 1201px #fff;
-    }
-    
-    @keyframes animStar {
-      from { transform: translateY(0px); }
-      to { transform: translateY(-2000px); }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
   <script>
-    // Dark/Light preference
-    const saved = localStorage.getItem('theme');
-    if(saved === 'light') document.documentElement.classList.add('light');
-    function toggleTheme(){
-      document.documentElement.classList.toggle('light');
-      localStorage.setItem('theme', document.documentElement.classList.contains('light') ? 'light' : 'dark');
-    }
-
     // Project data — edit me!
     const PROJECTS = [
       {
@@ -355,49 +654,69 @@
     }
 
     function renderProjects(){
-      const root = document.getElementById('projects');
-      PROJECTS.forEach(p=>{
-        root.append(el('article',{className:'card'},[
+      const root = document.getElementById('projects-grid');
+      PROJECTS.forEach((p, index) => {
+        const card = el('article',{className:'card reveal'},[
+          el('span',{className:'label'},`Project // 00${index + 1}`),
           el('h3',{},p.title),
-          el('p',{className:'muted'},p.blurb),
+          el('p',{},p.blurb),
           el('div',{className:'badges'}, p.stack.map(s=> el('span',{className:'badge'}, s))),
-          el('div',{style:'display:flex;gap:10px;margin-top:6px'},[
-            p.links.demo && el('a',{className:'btn', href:p.links.demo, target:'_blank', rel:'noopener'},['Live demo →']),
-            p.links.code && el('a',{className:'btn', href:p.links.code, target:'_blank', rel:'noopener'},['Source code →'])
+          el('div',{style:'display:flex;gap:10px;margin-top:1rem'},[
+            p.links.demo && p.links.demo !== '#' && el('a',{className:'btn', href:p.links.demo, target:'_blank', rel:'noopener'},['Live Demo →']),
+            p.links.code && p.links.code !== '#' && el('a',{className:'btn', href:p.links.code, target:'_blank', rel:'noopener'},['Source →'])
           ])
-        ]))
-      })
+        ]);
+        card.style.animationDelay = `${0.1 * index}s`;
+        root.append(card);
+      });
     }
 
     function renderCerts(){
-      const root = document.getElementById('certs');
-      CERTS.forEach(c=>{
-        root.append(el('div',{className:'card'},[
+      const root = document.getElementById('certs-grid');
+      CERTS.forEach((c, index) => {
+        const card = el('div',{className:'card reveal'},[
+          el('div',{className:'screw tl'}),
+          el('div',{className:'screw tr'}),
+          el('div',{className:'screw bl'}),
+          el('div',{className:'screw br'}),
+          el('span',{className:'label'},`Certification // 00${index + 1}`),
           el('h3',{},c.name),
           el('p',{className:'muted'},`Issued ${c.year}`)
-        ]))
-      })
+        ]);
+        card.style.animationDelay = `${0.1 * index}s`;
+        root.append(card);
+      });
     }
 
     function renderSkills(){
-      const root = document.getElementById('skills');
-      Object.entries(SKILLS).forEach(([group, list])=>{
-        root.append(el('div',{className:'card'},[
+      const root = document.getElementById('skills-grid');
+      Object.entries(SKILLS).forEach(([group, list], index) => {
+        const card = el('div',{className:'card reveal'},[
+          el('div',{className:'screw tl'}),
+          el('div',{className:'screw tr'}),
+          el('div',{className:'screw bl'}),
+          el('div',{className:'screw br'}),
+          el('span',{className:'label'},`Stack // ${group}`),
           el('h3',{},group),
           el('div',{className:'badges'}, list.map(s=> el('span',{className:'badge'}, s)))
-        ]))
-      })
+        ]);
+        card.style.animationDelay = `${0.1 * index}s`;
+        root.append(card);
+      });
     }
 
     function renderExperience(){
-      const root = document.getElementById('experience');
-      EXPERIENCE.forEach(item=>{
-        root.append(el('div',{className:'t-item card'},[
+      const root = document.getElementById('experience-grid');
+      EXPERIENCE.forEach((item, index) => {
+        const card = el('div',{className:'t-item card reveal'},[
+          el('span',{className:'label'},`Role // 00${index + 1}`),
           el('h3',{},`${item.role} · ${item.company}`),
           el('p',{className:'muted'},item.period),
-          el('ul',{className:'list'}, item.highlights.map(h=> el('li',{},'• '+h)))
-        ]))
-      })
+          el('ul',{className:'list'}, item.highlights.map(h=> el('li',{},'→ '+h)))
+        ]);
+        card.style.animationDelay = `${0.2 * index}s`;
+        root.append(card);
+      });
     }
 
     // Scroll-triggered animations
@@ -409,27 +728,27 @@
           }
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      
+
       document.querySelectorAll('section').forEach((section, index)=>{
         section.classList.add('fade-in');
         section.style.transitionDelay = `${index * 0.1}s`;
         observer.observe(section);
       });
     }
-    
+
     // Active navigation based on scroll
     function initActiveNavigation(){
       const sections = document.querySelectorAll('section[id]');
       const navLinks = document.querySelectorAll('nav a[href^="#"]');
-      
+
       function updateActiveNav(){
-        const scrollY = window.scrollY + 100;
-        
+        const scrollY = window.scrollY + 150;
+
         sections.forEach(section=>{
           const sectionTop = section.offsetTop;
           const sectionHeight = section.offsetHeight;
           const sectionId = section.getAttribute('id');
-          
+
           if(scrollY >= sectionTop && scrollY < sectionTop + sectionHeight){
             navLinks.forEach(link => {
               link.classList.remove('active');
@@ -440,58 +759,11 @@
           }
         });
       }
-      
+
       window.addEventListener('scroll', updateActiveNav);
       updateActiveNav();
     }
-    
-    // Parallax effect for background gradients
-    function initParallax(){
-      const body = document.body;
-      
-      window.addEventListener('scroll', ()=>{
-        const scrolled = window.pageYOffset;
-        const scrolledPercent = scrolled / (document.documentElement.scrollHeight - window.innerHeight);
-        
-        // Animated gradient positions based on scroll
-        const gradient1X = -20 + (scrolledPercent * 40);
-        const gradient1Y = 10 + (scrolledPercent * 20);
-        const gradient2X = -10 + (scrolledPercent * 30);
-        const gradient2Y = 5 + (scrolledPercent * 15);
-        
-        body.style.background = `
-          radial-gradient(1200px 600px at ${gradient1X}% ${gradient1Y}%, rgba(96,165,250,.12), transparent 60%),
-          radial-gradient(800px 400px at ${gradient2X}% ${gradient2Y}%, rgba(34,211,238,.12), transparent 60%),
-          var(--bg)
-        `;
-        
-        // Parallax for hero elements
-        const parallaxElements = document.querySelectorAll('.hero > *');
-        parallaxElements.forEach((el, index)=>{
-          const speed = 0.3 + (index * 0.05);
-          el.style.transform = `translateY(${scrolled * speed * 0.1}px)`;
-        });
-      });
-    }
-    
-    // Enhanced theme toggle with animation
-    function enhancedToggleTheme(){
-      const root = document.documentElement;
-      const currentTheme = root.classList.contains('light') ? 'dark' : 'light';
-      
-      // Add transition class
-      root.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-      
-      // Toggle theme
-      root.classList.toggle('light');
-      localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
-      
-      // Remove transition after animation
-      setTimeout(()=>{
-        root.style.transition = '';
-      }, 300);
-    }
-    
+
     // Smooth scrolling for navigation links
     function initSmoothScrolling(){
       document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
@@ -504,89 +776,33 @@
         });
       });
     }
-    
-    // Add ripple effect to buttons
-    function createRipple(event){
-      const button = event.currentTarget;
-      const ripple = document.createElement('span');
-      const rect = button.getBoundingClientRect();
-      const size = Math.max(rect.width, rect.height);
-      const x = event.clientX - rect.left - size / 2;
-      const y = event.clientY - rect.top - size / 2;
-      
-      ripple.style.width = ripple.style.height = size + 'px';
-      ripple.style.left = x + 'px';
-      ripple.style.top = y + 'px';
-      ripple.classList.add('ripple');
-      
-      button.appendChild(ripple);
-      
-      setTimeout(()=>{
-        ripple.remove();
-      }, 600);
+
+    // Subtle Parallax effect on cards
+    function initParallax(){
+      document.addEventListener('mousemove', (e) => {
+        const cards = document.querySelectorAll('.card');
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+
+        cards.forEach((card, index) => {
+          const shiftX = (x - 0.5) * (index % 3 + 1) * 5;
+          const shiftY = (y - 0.5) * (index % 3 + 1) * 5;
+          card.style.backgroundPosition = `${50 + shiftX}% ${50 + shiftY}%`;
+        });
+      });
     }
-    
+
     document.addEventListener('DOMContentLoaded', ()=>{
       renderProjects();
       renderCerts();
       renderSkills();
       renderExperience();
-      
-      // Initialize all interactions
+
       initScrollAnimations();
       initActiveNavigation();
-      initParallax();
       initSmoothScrolling();
-      
-      // Replace old theme toggle with enhanced version
-      const oldToggle = document.querySelector('.toggle');
-      if(oldToggle){
-        oldToggle.onclick = enhancedToggleTheme;
-      }
-      
-      // Add ripple effect to all buttons
-      document.querySelectorAll('.btn').forEach(btn=>{
-        btn.addEventListener('click', createRipple);
-      });
-      
-      // Add stagger animation to timeline items
-      document.querySelectorAll('.t-item').forEach((item, index)=>{
-        item.style.animationDelay = `${index * 0.2}s`;
-      });
-      
-      // Add keyboard navigation
-      document.addEventListener('keydown', (e)=>{
-        if(e.key === 'Escape'){
-          enhancedToggleTheme();
-        }
-      });
+      initParallax();
     });
-    
-    // Add CSS for ripple effect
-    const rippleCSS = document.createElement('style');
-    rippleCSS.textContent = `
-      .ripple {
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.5);
-        transform: scale(0);
-        animation: ripple-animation 0.6s ease-out;
-        pointer-events: none;
-      }
-      
-      @keyframes ripple-animation {
-        to {
-          transform: scale(4);
-          opacity: 0;
-        }
-      }
-      
-      .btn {
-        position: relative;
-        overflow: hidden;
-      }
-    `;
-    document.head.appendChild(rippleCSS);
   </script>
   <script type="application/ld+json">
   {
@@ -602,16 +818,16 @@
   }
   </script>
 </head>
-  <body>
-  <div id="stars"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
-  <header>
+<body>
+  <div class="grain-overlay"></div>
+  <div class="anodized-bg"></div>
+
+  <header class="reveal">
     <div class="brand">
-      <div class="logo" aria-hidden="true">AH</div>
+      <div class="logo">AH_SYS</div>
       <div>
         <div class="title">Abdelaziz Hafez</div>
-        <div class="muted" style="font-size:13px">AWS/Azure Cloud Architect · Full‑stack Web Developer</div>
+        <div class="subtitle-text">AWS/Azure Cloud Architect · Full‑stack Developer</div>
       </div>
     </div>
     <nav>
@@ -620,16 +836,14 @@
       <a href="#certifications">Certifications</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
-      <span class="switch">
-        <span class="sr-only">Theme</span>
-        <div class="toggle" role="switch" aria-checked="false" onclick="toggleTheme()"><div class="knob"></div></div>
-      </span>
     </nav>
   </header>
 
   <main class="container">
-    <section class="hero">
-      <h1>Designing scalable cloud platforms & building delightful web apps.</h1>
+    <section class="hero reveal" style="animation-delay: 0.2s;">
+      <div class="blueprint-grid"></div>
+      <h1>Cloud<br>Architect</h1>
+      <div class="hero-subtitle">SYSTEMS INTEGRATION & HIGH-PERFORMANCE WEB</div>
       <p>Certified <strong>AWS</strong> / <strong>Azure</strong> architect and seasoned <strong>Full‑stack developer</strong> with a track record of high‑availability, cost‑efficient systems. I love infra‑as‑code, automation, and clean UX.</p>
       <div class="badges">
         <span class="badge">AWS SA‑Pro</span>
@@ -637,7 +851,7 @@
         <span class="badge">Terraform / CDK</span>
         <span class="badge">React / FastAPI</span>
       </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:1.5rem">
         <a class="btn primary" href="#projects">View Projects</a>
         <a class="btn" href="https://github.com/ahafez8596" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://www.linkedin.com/in/abdelazizhafez" target="_blank" rel="noopener">LinkedIn</a>
@@ -645,12 +859,12 @@
       </div>
     </section>
 
-    <section id="projects" class="projects">
+    <section id="projects">
       <div class="section-title">
         <h2>Featured Projects</h2>
         <span class="muted">Real work. Real impact.</span>
       </div>
-      <div class="grid three" id="projects"></div>
+      <div class="grid three" id="projects-grid"></div>
     </section>
 
     <section id="experience">
@@ -658,7 +872,7 @@
         <h2>Experience</h2>
         <span class="muted">Selected roles</span>
       </div>
-      <div class="timeline grid" id="experience"></div>
+      <div class="timeline grid" id="experience-grid"></div>
     </section>
 
     <section id="certifications">
@@ -666,7 +880,7 @@
         <h2>Certifications</h2>
         <span class="muted">Valid & current</span>
       </div>
-      <div class="grid two" id="certs"></div>
+      <div class="grid two" id="certs-grid"></div>
     </section>
 
     <section id="skills">
@@ -674,26 +888,42 @@
         <h2>Skills</h2>
         <span class="muted">Cloud · Dev · Data · Ops</span>
       </div>
-      <div class="grid two" id="skills"></div>
+      <div class="grid two" id="skills-grid"></div>
     </section>
 
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p class="muted">Open to consulting, architecture reviews, and build‑outs.</p>
-      <div class="badges">
+    <section id="contact" class="card reveal">
+      <div class="screw tl"></div>
+      <div class="screw tr"></div>
+      <div class="screw bl"></div>
+      <div class="screw br"></div>
+      <span class="label">Connect // 001</span>
+      <h2 class="plate-title">Contact</h2>
+      <p>Open to consulting, architecture reviews, and build‑outs.</p>
+      <div class="badges" style="margin-bottom:1.5rem">
         <span class="pill">Based in USA (AZ timezone)</span>
         <span class="pill">Remote‑friendly</span>
         <span class="pill">English / Arabic</span>
       </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
-        <a class="btn primary" href="ahafez8596@gmail.com">Email me</a>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn primary" href="mailto:ahafez8596@gmail.com">Email me</a>
         <a class="btn" href="https://cal.com/zezo-hafez/" target="_blank" rel="noopener">Book a call</a>
       </div>
     </section>
+
+    <a href="#contact" class="cta-link reveal" style="animation-delay: 0.6s;">
+      EXECUTE PROJECT_INIT
+      <span>( START_COLLABORATION )</span>
+    </a>
   </main>
 
   <footer class="footer container">
-    <div>© <span id="y"></span> Abdelaziz Hafez. Built with vanilla HTML/CSS/JS. <span class="muted">Dark‑mode, a11y, and SEO‑friendly.</span></div>
+    <div class="footer-coords">
+      LAT: 33.4484° N<br>
+      LONG: 112.0740° W
+    </div>
+    <div class="footer-copy">
+      © <span id="y"></span> HAFEZ_SYSTEMS
+    </div>
   </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
