@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Abdelaziz Hafez — Cloud Architect & Full‑stack Developer</title>
-  <meta name="description" content="Certified AWS/Azure Cloud Architect and seasoned Full‑stack Web Developer. Portfolio, projects, certifications, and contact." />
+  <meta name="description"
+    content="Certified AWS/Azure Cloud Architect and seasoned Full‑stack Web Developer. Portfolio, projects, certifications, and contact." />
   <meta property="og:title" content="Abdelaziz Hafez — Cloud Architect & Full‑stack Developer" />
-  <meta property="og:description" content="Certified AWS/Azure Cloud Architect and seasoned Full‑stack Web Developer." />
+  <meta property="og:description"
+    content="Certified AWS/Azure Cloud Architect and seasoned Full‑stack Web Developer." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#120a07" />
   <link rel="icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --bg-deep: #120a07;
@@ -34,7 +39,8 @@
       cursor: crosshair;
     }
 
-    html, body {
+    html,
+    body {
       height: 100%;
     }
 
@@ -112,13 +118,13 @@
       padding: 0.5rem 1rem;
       border: 1px solid var(--copper-dark);
       background: linear-gradient(135deg, var(--copper-etched), var(--bg-deep));
-      box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
       transition: all 0.3s ease;
     }
 
     .logo:hover {
       border-color: var(--copper-primary);
-      box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 0 15px rgba(184, 115, 51, 0.3);
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(184, 115, 51, 0.3);
     }
 
     .title {
@@ -149,7 +155,8 @@
       transition: all 0.3s ease;
     }
 
-    nav a:hover, nav a.active {
+    nav a:hover,
+    nav a.active {
       color: var(--copper-primary);
       opacity: 1;
     }
@@ -268,7 +275,7 @@
 
     .btn:hover {
       border-color: var(--copper-primary);
-      box-shadow: 0 5px 20px rgba(0,0,0,0.3), 0 0 15px rgba(184, 115, 51, 0.2);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(184, 115, 51, 0.2);
       transform: translateY(-2px);
     }
 
@@ -299,13 +306,28 @@
       gap: 1.5rem;
     }
 
-    .two { grid-template-columns: repeat(2, 1fr); }
-    .three { grid-template-columns: repeat(3, 1fr); }
+    .two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .three {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     @media (max-width: 900px) {
-      .two, .three { grid-template-columns: 1fr; }
-      .grid-container { grid-template-columns: 1fr; }
-      .etched-plate { grid-column: span 1 !important; }
+
+      .two,
+      .three {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+
+      .etched-plate {
+        grid-column: span 1 !important;
+      }
     }
 
     /* Section Titles */
@@ -338,7 +360,8 @@
     }
 
     /* The Etched Components / Cards */
-    .etched-plate, .card {
+    .etched-plate,
+    .card {
       background: var(--copper-etched);
       border: 1px solid var(--copper-dark);
       padding: 2rem;
@@ -351,13 +374,15 @@
       grid-column: span 6;
     }
 
-    .etched-plate:hover, .card:hover {
+    .etched-plate:hover,
+    .card:hover {
       border-color: var(--copper-primary);
       transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(184, 115, 51, 0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(184, 115, 51, 0.1);
     }
 
-    .etched-plate::after, .card::after {
+    .etched-plate::after,
+    .card::after {
       content: '';
       position: absolute;
       top: 0;
@@ -369,7 +394,8 @@
       transition: transform 0.6s ease;
     }
 
-    .etched-plate:hover::after, .card:hover::after {
+    .etched-plate:hover::after,
+    .card:hover::after {
       transform: translateX(100%);
     }
 
@@ -433,10 +459,25 @@
       border: 1px solid #000;
     }
 
-    .tl { top: 10px; left: 10px; }
-    .tr { top: 10px; right: 10px; }
-    .bl { bottom: 10px; left: 10px; }
-    .br { bottom: 10px; right: 10px; }
+    .tl {
+      top: 10px;
+      left: 10px;
+    }
+
+    .tr {
+      top: 10px;
+      right: 10px;
+    }
+
+    .bl {
+      bottom: 10px;
+      left: 10px;
+    }
+
+    .br {
+      bottom: 10px;
+      right: 10px;
+    }
 
     /* Timeline */
     .timeline {
@@ -565,15 +606,22 @@
       padding: 0;
       margin: -1px;
       overflow: hidden;
-      clip: rect(0,0,0,0);
+      clip: rect(0, 0, 0, 0);
       white-space: nowrap;
       border: 0;
     }
 
     /* Animations */
     @keyframes reveal {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .reveal {
@@ -607,10 +655,10 @@
         links: { demo: '#', code: 'https://marketplace.visualstudio.com/items?itemName=Abdelaziz-Hafez.looks-good' }
       },
       {
-        title: 'Simple Weather Compare',
-        blurb: 'Simple weather compare app that allows you to compare weather conditions between two cities no API required.',
-        stack: ['HTML', 'CSS', 'Javascript', 'Open-Meteo'],
-        links: { demo: '#', code: 'https://ahafez8596.github.io/Weather-Compare/' }
+        title: 'Aman Security Scanner',
+        blurb: 'The first and only free vulnerabliity scan and pentest platform with 50 open-source scanners that is also AI-powered. Aman scans your app/container/Git Repo for security vulnerabilities and provides recommendations to improve its security posture.',
+        stack: ['React with TypeScript', 'FastAPI', 'Celery + Redis', 'SQLite', 'Docker'],
+        links: { demo: 'https://amanitsecurity.com/', code: '#' }
       }
     ];
 
@@ -656,23 +704,23 @@
       }
     ];
 
-    function el(tag, props={}, children=[]) {
+    function el(tag, props = {}, children = []) {
       const e = Object.assign(document.createElement(tag), props);
-      (Array.isArray(children)?children:[children]).filter(Boolean).forEach(c=> e.append(c.nodeType? c : document.createTextNode(c)));
+      (Array.isArray(children) ? children : [children]).filter(Boolean).forEach(c => e.append(c.nodeType ? c : document.createTextNode(c)));
       return e;
     }
 
-    function renderProjects(){
+    function renderProjects() {
       const root = document.getElementById('projects-grid');
       PROJECTS.forEach((p, index) => {
-        const card = el('article',{className:'card reveal'},[
-          el('span',{className:'label'},`Project // 00${index + 1}`),
-          el('h3',{},p.title),
-          el('p',{},p.blurb),
-          el('div',{className:'badges'}, p.stack.map(s=> el('span',{className:'badge'}, s))),
-          el('div',{style:'display:flex;gap:10px;margin-top:1rem'},[
-            p.links.demo && p.links.demo !== '#' && el('a',{className:'btn', href:p.links.demo, target:'_blank', rel:'noopener'},['Live Demo →']),
-            p.links.code && p.links.code !== '#' && el('a',{className:'btn', href:p.links.code, target:'_blank', rel:'noopener'},['Source →'])
+        const card = el('article', { className: 'card reveal' }, [
+          el('span', { className: 'label' }, `Project // 00${index + 1}`),
+          el('h3', {}, p.title),
+          el('p', {}, p.blurb),
+          el('div', { className: 'badges' }, p.stack.map(s => el('span', { className: 'badge' }, s))),
+          el('div', { style: 'display:flex;gap:10px;margin-top:1rem' }, [
+            p.links.demo && p.links.demo !== '#' && el('a', { className: 'btn', href: p.links.demo, target: '_blank', rel: 'noopener' }, ['Live Demo →']),
+            p.links.code && p.links.code !== '#' && el('a', { className: 'btn', href: p.links.code, target: '_blank', rel: 'noopener' }, ['Source →'])
           ])
         ]);
         card.style.animationDelay = `${0.1 * index}s`;
@@ -680,48 +728,48 @@
       });
     }
 
-    function renderCerts(){
+    function renderCerts() {
       const root = document.getElementById('certs-grid');
       CERTS.forEach((c, index) => {
-        const card = el('div',{className:'card reveal'},[
-          el('div',{className:'screw tl'}),
-          el('div',{className:'screw tr'}),
-          el('div',{className:'screw bl'}),
-          el('div',{className:'screw br'}),
-          el('span',{className:'label'},`Certification // 00${index + 1}`),
-          el('h3',{},c.name),
-          el('p',{className:'muted'},`Issued ${c.year}`)
+        const card = el('div', { className: 'card reveal' }, [
+          el('div', { className: 'screw tl' }),
+          el('div', { className: 'screw tr' }),
+          el('div', { className: 'screw bl' }),
+          el('div', { className: 'screw br' }),
+          el('span', { className: 'label' }, `Certification // 00${index + 1}`),
+          el('h3', {}, c.name),
+          el('p', { className: 'muted' }, `Issued ${c.year}`)
         ]);
         card.style.animationDelay = `${0.1 * index}s`;
         root.append(card);
       });
     }
 
-    function renderSkills(){
+    function renderSkills() {
       const root = document.getElementById('skills-grid');
       Object.entries(SKILLS).forEach(([group, list], index) => {
-        const card = el('div',{className:'card reveal'},[
-          el('div',{className:'screw tl'}),
-          el('div',{className:'screw tr'}),
-          el('div',{className:'screw bl'}),
-          el('div',{className:'screw br'}),
-          el('span',{className:'label'},`Stack // ${group}`),
-          el('h3',{},group),
-          el('div',{className:'badges'}, list.map(s=> el('span',{className:'badge'}, s)))
+        const card = el('div', { className: 'card reveal' }, [
+          el('div', { className: 'screw tl' }),
+          el('div', { className: 'screw tr' }),
+          el('div', { className: 'screw bl' }),
+          el('div', { className: 'screw br' }),
+          el('span', { className: 'label' }, `Stack // ${group}`),
+          el('h3', {}, group),
+          el('div', { className: 'badges' }, list.map(s => el('span', { className: 'badge' }, s)))
         ]);
         card.style.animationDelay = `${0.1 * index}s`;
         root.append(card);
       });
     }
 
-    function renderExperience(){
+    function renderExperience() {
       const root = document.getElementById('experience-grid');
       EXPERIENCE.forEach((item, index) => {
-        const card = el('div',{className:'t-item card reveal'},[
-          el('span',{className:'label'},`Role // 00${index + 1}`),
-          el('h3',{},`${item.role} · ${item.company}`),
-          el('p',{className:'muted'},item.period),
-          el('ul',{className:'list'}, item.highlights.map(h=> el('li',{},'→ '+h)))
+        const card = el('div', { className: 't-item card reveal' }, [
+          el('span', { className: 'label' }, `Role // 00${index + 1}`),
+          el('h3', {}, `${item.role} · ${item.company}`),
+          el('p', { className: 'muted' }, item.period),
+          el('ul', { className: 'list' }, item.highlights.map(h => el('li', {}, '→ ' + h)))
         ]);
         card.style.animationDelay = `${0.2 * index}s`;
         root.append(card);
@@ -729,16 +777,16 @@
     }
 
     // Scroll-triggered animations
-    function initScrollAnimations(){
-      const observer = new IntersectionObserver((entries)=>{
-        entries.forEach(entry=>{
-          if(entry.isIntersecting){
+    function initScrollAnimations() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
             entry.target.classList.add('visible');
           }
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-      document.querySelectorAll('section').forEach((section, index)=>{
+      document.querySelectorAll('section').forEach((section, index) => {
         section.classList.add('fade-in');
         section.style.transitionDelay = `${index * 0.1}s`;
         observer.observe(section);
@@ -746,22 +794,22 @@
     }
 
     // Active navigation based on scroll
-    function initActiveNavigation(){
+    function initActiveNavigation() {
       const sections = document.querySelectorAll('section[id]');
       const navLinks = document.querySelectorAll('nav a[href^="#"]');
 
-      function updateActiveNav(){
+      function updateActiveNav() {
         const scrollY = window.scrollY + 150;
 
-        sections.forEach(section=>{
+        sections.forEach(section => {
           const sectionTop = section.offsetTop;
           const sectionHeight = section.offsetHeight;
           const sectionId = section.getAttribute('id');
 
-          if(scrollY >= sectionTop && scrollY < sectionTop + sectionHeight){
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
             navLinks.forEach(link => {
               link.classList.remove('active');
-              if(link.getAttribute('href') === `#${sectionId}`){
+              if (link.getAttribute('href') === `#${sectionId}`) {
                 link.classList.add('active');
               }
             });
@@ -774,12 +822,12 @@
     }
 
     // Smooth scrolling for navigation links
-    function initSmoothScrolling(){
-      document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-        anchor.addEventListener('click', function(e){
+    function initSmoothScrolling() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
           e.preventDefault();
           const target = document.querySelector(this.getAttribute('href'));
-          if(target){
+          if (target) {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
         });
@@ -787,7 +835,7 @@
     }
 
     // Subtle Parallax effect on cards
-    function initParallax(){
+    function initParallax() {
       document.addEventListener('mousemove', (e) => {
         const cards = document.querySelectorAll('.card');
         const x = e.clientX / window.innerWidth;
@@ -801,7 +849,7 @@
       });
     }
 
-    document.addEventListener('DOMContentLoaded', ()=>{
+    document.addEventListener('DOMContentLoaded', () => {
       renderProjects();
       renderCerts();
       renderSkills();
@@ -827,6 +875,7 @@
   }
   </script>
 </head>
+
 <body>
   <div class="grain-overlay"></div>
   <div class="anodized-bg"></div>
@@ -853,7 +902,9 @@
       <div class="blueprint-grid"></div>
       <h1>Cloud<br>solutions & Full‑stack expertise</h1>
       <div class="hero-subtitle">Translating business and regulatory requirements into target solutions</div>
-      <p>Certified <strong>AWS</strong> / <strong>Azure</strong> architect and seasoned <strong>Full‑stack developer</strong> with a track record of high‑availability, cost‑efficient systems. I love infra‑as‑code, automation, and clean UX.</p>
+      <p>Certified <strong>AWS</strong> / <strong>Azure</strong> architect and seasoned <strong>Full‑stack
+          developer</strong> with a track record of high‑availability, cost‑efficient systems. I love infra‑as‑code,
+        automation, and clean UX.</p>
       <div class="badges">
         <span class="badge">AWS SA‑Pro</span>
         <span class="badge">Azure Architect Expert</span>
@@ -939,4 +990,5 @@
   </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
+
 </html>
